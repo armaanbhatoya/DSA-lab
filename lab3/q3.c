@@ -16,7 +16,10 @@ int delete_r(int* R_top ){
 }
 
 int main(){
-    char arr[] = "rrrrrrbbbbbb"; 
+    char arr[100]; // Increased size for user input
+    printf("Enter the string of r's and b's: ");
+    scanf("%99s", arr);
+
     char R[sizeof(arr)];
     int R_top = -1; 
     
@@ -35,7 +38,7 @@ int main(){
     }
 
     if(valid && R_top == -1) 
-        printf("|b| == |r|\n");
+        printf("|b| = |r|\n");
     else 
         printf("|b| != |r|\n");
 
