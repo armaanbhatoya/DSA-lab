@@ -15,7 +15,7 @@ struct A{
 };
 
 int main(){
-    struct A *temp = NULL, *head = NULL , *prev = NULL;
+    struct A *temp = NULL, *start = NULL , *prev = NULL;
     
     int n=10;
     for (int i = 0; i < n; i++)
@@ -27,8 +27,8 @@ int main(){
         scanf(" %lf",&temp->p.salary);
         temp->q = NULL;
 
-        if(head == NULL){
-            head = temp;
+        if(start == NULL){
+            start = temp;
         }
         else{
             prev->q = temp;
@@ -37,7 +37,7 @@ int main(){
     }
 
     printf("\nEmployee details :->\n");
-    temp = head;
+    temp = start;
     int i = 1;
     while(temp != NULL){
         printf("Employee %d name   : %s\n", i, temp->p.name);
