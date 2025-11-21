@@ -30,6 +30,7 @@ int main() {
         adj[v].push_back(u); 
     }
 
+    cout<<"enter starting node: ";
     int start;
     cin >> start; 
 
